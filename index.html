@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Required Stylesheets -->
+<link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/bootstrap-treeview/public/js/bootstrap-treeview.js"></script>
+
+
+  <meta charset="utf-8">
+  <title>Open Law</title>
+</head>
+<body>
+
+  <div class="container">
+    <div class="jumbotron">
+    	<h1>LEY 11.179</h1>
+    	<p>(T.O. 1984 actualizado)</p>
+    	<p>CODIGO PENAL DE LA NACION ARGENTINA</p>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+          <h2>TITULO I</h2>
+          <h3>APLICACION DE LA LEY PENAL</h3>
+          <div id="treeview7" class="treeview">
+          	</div>
+        </div>
+       
+    
+  </div>
+  <script>
+var defaultData = [
+          {
+            text: '<strong>ARTICULO 1º</strong> ',
+            href: '#parent1',
+            tags: ['4'],
+            nodes: [{
+
+				text: 'Este código se aplicará:',
+				tags: ['0'],
+                nodes: [
+              {
+                text: '1º.- Por delitos cometidos o cuyos efectos deban producirse en el territorio de la Nación Argentina, o en los lugares sometidos a su jurisdicción;',
+                href: '#child1',
+                tags: ['2'],
+                
+              },
+              {
+                text: '2º.- Por delitos cometidos en el extranjero por agentes o empleados de autoridades argentinas en desempeño de su cargo.',
+                href: '#child2',
+                tags: ['0']
+              }
+            ]
+            }
+            ]
+
+            
+          },
+          {
+            text: '<strong>ARTICULO 2º</strong> ',
+            href: '#parent2',
+            tags: ['0'],
+            nodes: [
+            {
+            	text: '<p>Si la ley vigente al tiempo de cometerse el delito fuere distinta de la que exista al pronunciarse el fallo o en el tiempo intermedio, se aplicará siempre la más benigna.</p><p>Si durante la condena se dictare una ley más benigna, la pena se limitará a la establecida por esa ley. En todos los casos del presente artículo, los efectos de la nueva ley se operarán de pleno derecho.</p>',
+	            tags: ['0']
+            }
+            ]
+          },
+          {
+            text: '<strong>ARTICULO 3º</strong> ',
+            tags: ['0'],
+            nodes: [
+            {
+            	text: '<p>En el cómputo de la prisión preventiva se observará separadamente la ley más favorable al procesado.</p>',
+	            tags: ['0']
+            }
+            ]
+          },
+          {
+            text: '<strong>ARTICULO 4º</strong> ',
+            tags: ['0'],
+            nodes: [
+            {
+            	text: '<p>Las disposiciones generales del presente código se aplicarán a todos los delitos previstos por leyes especiales, en cuanto éstas no dispusieran lo contrario.</p>',
+	            tags: ['0']
+            }
+            ]
+          }
+        ];
+
+$('#treeview7').treeview({
+          data: defaultData
+        });
+  </script>
+  
+</body>
+</html>
